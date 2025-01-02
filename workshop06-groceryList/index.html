@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organized Grocery List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .header-title {
+            color: #008080;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .section-header {
+            background-color: #ffe8a1;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            max-width: 33%;
+        }
+
+        .section-card {
+            background-color: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .image-placeholder {
+            background-color: #e0e0e0;
+            height: 250px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ccc;
+        }
+
+        .image-placeholder img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="text-center py-4">
+        <h1 class="text-3xl font-bold header-title">My Very Organized Grocery List</h1>
+    </header>
+
+    <!-- Pantry Items Section -->
+    <div class="flex flex-col items-start">
+        <div class="section-header">PANTRY ITEMS</div>
+        <div class="grid-container">
+            <div class="section-card">
+                <h3 class="font-semibold">CANNED</h3>
+                <ul class="list-disc ml-6">
+                    <li>Corn</li>
+                    <li>Tuna</li>
+                    <li>Green Beans</li>
+                    <li>Beans</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h3 class="font-semibold">DRY GOODS</h3>
+                <ul class="list-disc ml-6">
+                    <li>Rice</li>
+                    <li>Lentils</li>
+                    <li>Oats</li>
+                    <li>Pancake Mix</li>
+                </ul>
+            </div>
+            <div class="image-placeholder">
+                <p>Image Placeholder</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Freezer Items Section -->
+    <div class="flex flex-col items-start">
+        <div class="section-header">FREEZER ITEMS</div>
+        <div class="grid-container">
+            <div class="section-card">
+                <h3 class="font-semibold">VEGGIES</h3>
+                <ul class="list-disc ml-6">
+                    <li>Broccoli</li>
+                    <li>Carrots</li>
+                    <li>Cauliflower</li>
+                    <li>Bell Peppers</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h3 class="font-semibold">SNACKS</h3>
+                <ul class="list-disc ml-6">
+                    <li>Chicken Nuggets</li>
+                    <li>Hot Pockets</li>
+                    <li>Fries</li>
+                    <li>Tater Tots</li>
+                </ul>
+            </div>
+            <div class="image-placeholder">
+                <p>Image Placeholder</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center bg-gray-800 text-white py-4 mt-4">
+        <p>&copy; 2025 My Grocery List</p>
+    </footer>
+</body>
+
+</html>

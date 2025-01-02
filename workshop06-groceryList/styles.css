@@ -1,0 +1,33 @@
+header{
+    text-align : center ;
+    background-color : green ;
+    color : blue ;
+    padding : 12px ;
+    border: 5px solid yellow;
+/* Archivo CSS externo */
+body {
+    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+}
+
+body{
+    background-color : aliceblue
+}
