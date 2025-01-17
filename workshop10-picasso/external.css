@@ -1,0 +1,283 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0098a6;
+    color: #333;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+}
+
+/* Artwork Section */
+.artwork {
+    padding: 2rem;
+    position: relative;
+}
+
+/* Top Section with 3 Boxes */
+.grid-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    height: 150px;
+}
+
+.grid-item {
+    background: #007bff;
+    border: 2px solid white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circles */
+.circle {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle.small {
+    width: 40px;
+    height: 40px;
+    top: 10%;
+    left: 10%;
+}
+
+.circle.medium {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    left: 25%;
+}
+
+.circle.pink {
+    background: #ff8fa3;
+}
+
+.circle.yellow {
+    background: #ffd700;
+}
+
+/* Bottom Section */
+.grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.people {
+    display: flex;
+    justify-content: right; 
+    gap: 5px;
+    margin-top: 200px; 
+    margin-left: 300px; 
+}
+
+.person {
+    width: 15px;
+    height: 30px;
+    background: #00d2d3;
+    border-radius: 3px;
+    position: relative;
+}
+
+.person:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #00d2d3;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 0;
+}
+
+.person.dark {
+    background: #333;
+}
+
+.person.dark:before {
+    background: #333;
+}
+
+/* Triangles Section */
+.triangles {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    position: relative;
+}
+
+.triangle.green {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 200px solid #008000;
+}
+
+.triangle.light-green {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 200px solid #a2d149;
+}
+
+/* Green Line */
+.line {
+    width: 100%;
+    height: 10px;
+    background: #7cfc00;
+    margin-top: 1rem;
+}
+
+/* Form Section */
+.form-section {
+    text-align: center;
+    padding: 2rem;
+    background: #ececec;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Estilos para tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+    .grid-top {
+        grid-template-columns: 1fr; /* Cambia las cajas superiores a una sola columna */
+        height: auto; /* Ajusta la altura automáticamente */
+        gap: 1rem;
+    }
+
+    .grid-item {
+        height: 150px; /* Reduce el tamaño de las cajas */
+    }
+
+    .circle.small {
+        width: 30px;
+        height: 30px;
+    }
+
+    .circle.medium {
+        width: 50px;
+        height: 50px;
+    }
+
+    .people {
+        justify-content: center; /* Centra las personas en tablets */
+        margin-top: 30px; /* Ajusta el margen superior */
+        margin-right: 0;
+    }
+
+    .triangles {
+        justify-content: center; /* Centra los triángulos */
+        gap: 1rem;
+    }
+
+    .triangle.green,
+    .triangle.light-green {
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        border-bottom: 150px solid;
+    }
+
+    .line {
+        height: 8px; /* Reduce ligeramente la línea */
+    }
+}
+
+/* Estilos para móviles (pantallas pequeñas) */
+@media (max-width: 480px) {
+    .grid-top {
+        grid-template-columns: 1fr; /* Una sola columna para móviles */
+        gap: 0.5rem;
+    }
+
+    .grid-item {
+        height: 120px; /* Reduce el tamaño de las cajas */
+    }
+
+    .circle.small {
+        width: 20px;
+        height: 20px;
+    }
+
+    .circle.medium {
+        width: 40px;
+        height: 40px;
+    }
+
+    .people {
+        justify-content: center; 
+        margin-top: 20px; 
+        margin-right: 0;
+        gap: 3px; 
+    }
+
+    .triangles {
+        flex-direction: column; 
+        gap: 1rem;
+    }
+
+    .triangle.green,
+    .triangle.light-green {
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 100px solid;
+    }
+
+    .line {
+        height: 6px; 
+    }
+}
